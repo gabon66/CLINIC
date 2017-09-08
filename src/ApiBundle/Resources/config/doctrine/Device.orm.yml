@@ -1,0 +1,16 @@
+ApiBundle\Entity\Device:
+    type: entity
+    table: gateways
+    repositoryClass: ApiBundle\Repository\DeviceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+            data:
+                type: text
+            mac:
+                type: string
+    lifecycleCallbacks: {  }

@@ -1,0 +1,33 @@
+<div class="row">
+
+    <div class="col-lg-6"  ng-repeat="paciente in pacientes">
+
+    <div class="panel panel-success">
+            <div class="panel-heading">
+                {{ paciente.data.first_name }} {{ paciente.data.last_name }} - DNI: {{ paciente.dni }}
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img   style="height: 80px;width: 80px!important; padding-right: 5px"   src="../bundles/portal/images/person.png"/>
+                    </div>
+                    <div class="col-lg-9">
+                        <h5>Mail : {{ paciente.mail }}</h5>
+                        <h5>Fecha Nacimiento :{{ paciente.data.nacimiento }}</h5>
+                        <h5>Domicilio : {{ paciente.data.domicilio }}</h5>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5>Obra Social : {{ paciente.data.os }}</h5>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5>N° : {{ paciente.data.os_id }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-success btn-sm" ng-click="showMediciones(paciente)">Mediciones</button>
+            </div>
+        </div>
+    </div>
+
+</div>

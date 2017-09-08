@@ -1,0 +1,33 @@
+{# app/Resources/views/base.html.twig #}
+{% verbatim %}
+<script type="text/ng-template" id="mediciones.html">
+    <div class="modal-header">
+        <h3>Mediciones</h3>
+    </div>
+    <div class="modal-body">
+    <table class="table table-striped"> <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Valores</th>
+            <th>Paciente</th>
+            <th>Gateway</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="medicion in mediciones">
+            <td>{{ medicion.data.date}}</td>
+            <td>{{ medicion.data.tipo_name}}</td>
+            <td>{{ medicion.data.valor}}</td>
+            <td>{{ medicion.data.paciente}}</td>
+            <td>Clinica - Sala1</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-success" ng-click="cerrar()">Cerrar</a>
+    </div>
+</script>
+
+ {% endverbatim %}

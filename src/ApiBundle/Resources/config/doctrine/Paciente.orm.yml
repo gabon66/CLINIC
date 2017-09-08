@@ -1,0 +1,18 @@
+ApiBundle\Entity\Paciente:
+    type: entity
+    table: patients
+    repositoryClass: ApiBundle\Repository\PacienteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+            dni:
+                type: integer
+            data:
+                type: text
+            mail:
+                type: string
+    lifecycleCallbacks: {  }

@@ -1,0 +1,25 @@
+<div class="row">
+    <!--<div class="col-lg-4"  ng-repeat="paciente in pacientes">-->
+    <table class="table table-striped"> <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Valores</th>
+            <th>Paciente</th>
+            <th>Gateway</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="medicion in mediciones">
+            <td>{{ medicion.data.date}}</td>
+            <td>{{ medicion.data.tipo_name}}</td>
+            <td>{{ medicion.data.valor}}</td>
+            <td>{{ medicion.data.paciente}}</td>
+            <td>Clinica - Sala1</td>
+        </tr>
+    </tbody>
+    </table>
+
+
+
+</div>

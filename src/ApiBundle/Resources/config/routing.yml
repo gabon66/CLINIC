@@ -1,0 +1,85 @@
+
+# PACIENTE
+get_paciente:
+    path:     /api/paciente/{key}/{value}
+    methods:  [GET]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Pacientes:getPaciente }
+get_pacientes:
+    path:     /api/paciente
+    methods:  [GET]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Pacientes:getPacientes }
+set_paciente:
+    path:     /api/paciente
+    methods:  [PUT,POST ]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Pacientes:setPaciente }
+delete_paciente:
+    path:     /api/paciente
+    methods:  [DELETE]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Pacientes:deletePaciente }
+mail:
+    path:     /api/paciente/mail
+    methods:  [PUT,POST ]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Pacientes:mailReporte }
+# MEDICION
+
+get_medicion:
+    path:     /api/medicion/{key}/{value}
+    methods:  [GET]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:getMedicion }
+get_mediciones:
+    path:     /api/medicion
+    methods:  [GET]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:getMediciones }
+set_medicion:
+    path:     /api/medicion
+    methods:  [PUT,POST ]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:setMedicion }
+delete_medicion:
+    path:     /api/medicion
+    methods:  [DELETE]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:deleteMedicion }
+
+#device GATEWAYS
+
+get_device:
+    path:     /api/device/{key}/{value}
+    methods:  [GET]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:getDevice }
+get_mediciones:
+    path:     /api/device
+    methods:  [GET]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:getDevices }
+set_medicion:
+    path:     /api/device
+    methods:  [PUT,POST ]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:setDevice }
+delete_medicion:
+    path:     /api/device
+    methods:  [DELETE]
+    options:
+        expose: true
+    defaults: { _controller: ApiBundle:Mediciones:deleteMedicion }

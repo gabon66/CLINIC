@@ -1,0 +1,28 @@
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+    <br/>
+
+    <h3>Reporte eHealth -  {{ date }} </h3>
+    <h4>Hola : {{ nombre }} </h4>
+    <h3>Mediciones registradas :</h3>
+
+    <table class="table" style="background-color: #F7F7F7">
+        <thead>
+        <tr><th>Tipo</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+        {% for medicion in items %}
+            <tr>
+                <td>
+                    {{ medicion.tipo }}
+                </td>
+                <td>
+                    {{ medicion.valor }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h4>Gracias.</h4>
+{% endblock %}

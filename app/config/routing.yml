@@ -1,0 +1,17 @@
+login:
+    resource: "@LoginBundle/Resources/config/routing.yml"
+    prefix:   /
+
+portal:
+    resource: "@PortalBundle/Resources/config/routing.yml"
+    prefix:   /
+
+api:
+    resource: "@ApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

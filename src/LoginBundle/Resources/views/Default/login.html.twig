@@ -1,0 +1,58 @@
+{% extends '::base.html.twig' %}
+
+    {% block stylesheets %}
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+
+    {% endblock %}
+
+
+{% block body %}
+
+<body style="background-image: url({{ asset('bundles/portal/images/screen.png') }}) ; background-repeat: no-repeat ;background-size: cover">
+
+    <div class="container"  >
+        <br/><br/><br/><br/>
+        <div class="row">
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+
+                <div class="jumbotron" style="padding-top: 10px!important; padding-bottom: 10px!important;" >
+
+
+
+
+                    <form class="form-group-sm form-horizontal text-center " action="{{ path('login_check') }}" method="post">
+
+                        <img class="img-responsive"   src="{{ asset('bundles/portal/images/logo.png') }}"/>
+
+                        <div class="form-group">
+
+
+                            <input class="form-control input-sm" placeholder="Usuario" type="text" id="username" name="_username" value="{{ last_username }}" />
+
+                            <input  class="form-control input-sm" placeholder="Password" type="password" id="password" name="_password" />
+                            </br>
+                            <button type="submit" class="btn btn-success">Entrar</button>
+                        </div>
+                    </form>
+                    {% if error %}
+                        <div class="error">Error en usuario o clave</div>
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+{% endblock %}

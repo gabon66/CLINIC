@@ -1,0 +1,18 @@
+ApiBundle\Entity\Medicion:
+    type: entity
+    table: measures
+    repositoryClass: ApiBundle\Repository\MedicionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+            id_patient:
+                type: integer
+            data:
+                type: text
+            id_device:
+                type: integer
+    lifecycleCallbacks: {  }
